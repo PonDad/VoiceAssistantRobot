@@ -1,5 +1,5 @@
 # VoiceAssistantBot
-![img1]()
+![img1](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/vagpt1.JPG)
 
 ## ハードウェア
 - 本体: [RaspberryPi4 ModelB 4GB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
@@ -20,7 +20,7 @@
 - モーター制御・LED制御: [pantilthat](https://pypi.org/project/pantilthat/)
 
 ## 仕組み
-![img2]()
+![img2](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/chart_1.png)
 
 音声発話（ユーザー） --> 音声認識（Vosk） --> テキスト化 --> コマンド実行（analyzeファイル） --> 音声合成（Aques Talk Pi）--> 合成音声発話（ロボット）
 
