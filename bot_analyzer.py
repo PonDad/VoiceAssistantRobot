@@ -66,12 +66,14 @@ def analyze(user_input):
             if recognized_id in load_user:
                 user_name = load_user[recognized_id]["name"]
                 user_category = load_user[recognized_id]["category"]
+                user_interested = load_user[recognized_id]["interested"]
             else:
                 recognized_id = "unknown"
                 user_name = "ゲスト"
                 user_category = "unknown"
+                user_interested = "unknown"
 
-            robot_reply = "ユーザーIDは" + str(recognized_id) + "ユーザーネームは" + str(user_name), "ユーザーカテゴリーは" + str(user_category) + "です"
+            robot_reply = "ユーザーIDは" + str(recognized_id) + "ユーザーネームは" + str(user_name), "ユーザーカテゴリーは" + str(user_category), "ユーザーの興味は" + str(user_interested) + "です"
 
         elif command == "look_around":
             # cocoデータセットの英語-日本語翻訳をjsonファイルから読み込む
