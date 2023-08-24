@@ -1,6 +1,13 @@
 # VoiceAssistantBot
 ![img1](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/vagpt1.JPG)
 
+## 仕組み
+![img2](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/chart_1.png)
+
+音声発話（ユーザー） --> 音声認識（Vosk） --> テキスト化 --> コマンド実行（`analyze`関数） --> 音声合成（Aques Talk Pi）--> 合成音声発話（ロボット）
+
+の様に動作します。各コマンドは登録されたワードに一致すれば実行、という処理になります。
+
 ## ハードウェア
 - 本体: [RaspberryPi4 ModelB 4GB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 - パンチルトハット: [Pimoroni Pan-Tilt HAT](https://shop.pimoroni.com/products/pan-tilt-hat?variant=22408353287)
@@ -33,13 +40,6 @@
 > 画像認識用のDNNモデルは各リンク先よりダウンロードしたものです。
 >
 > リビングの気温・湿度・照度・鉢植えの水分は日本のサーバーをSeeed日本法人が用意してくれたので（[日本にWioサーバーを設置しました](https://lab.seeed.co.jp/entry/2022/01/25/120000)）そちらを利用しています。サーバーのアクセストークンは`.env`に記載しています。
-
-## 仕組み
-![img2](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/chart_1.png)
-
-音声発話（ユーザー） --> 音声認識（Vosk） --> テキスト化 --> コマンド実行（`analyze`関数） --> 音声合成（Aques Talk Pi）--> 合成音声発話（ロボット）
-
-の様に動作します。各コマンドは登録されたワードに一致すれば実行、という処理になります。
 
 ## 使い方
 各ライブラリをインポート後、必要なモデルをダウンロードしディレクトリに配置します。ユーザー情報の登録は
