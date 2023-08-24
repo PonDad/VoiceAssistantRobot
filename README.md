@@ -53,4 +53,4 @@ python bot_face_data_creator.py
 ```bash
 python main.py
 ```
-で実行してください。
+で実行してください。`ctrl + c`でウェイクワード待機のループが終了します。
