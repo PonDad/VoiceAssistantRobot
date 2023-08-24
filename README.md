@@ -14,6 +14,7 @@
 - カラーLEDスティック: [Adafruit NeoPixel Stick 8](https://shop.pimoroni.com/products/neopixel-stick-8-x-5050-rgbw-leds?variant=17436712071)
 - 熱対策(オプション) [GeeekPi Fan Hat for Raspberry Pi 4 Model B](https://wiki.52pi.com/index.php?title=EP-0152) 
 - 気温・湿度・照度・水分計測（オプション）: [WioNode](https://www.seeedstudio.com/Wio-Node.html)
+- USBマイク・USBスピーカー: RaspberryPiで使用可能なものを適宜使用してください
 
 ## ソフトウェア
 - OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/)
@@ -25,7 +26,7 @@
   - 顔識別モデル: [face_recognizer_fast.onnx](https://drive.google.com/file/d/1ClK9WiB492c5OZFKveF3XiHCejoOxINW/view)
   - 性別識別モデル: [gender_net.caffemodel](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master) / [gender_deploy.prototxt](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master)
   - 年令識別モデル: [age_net.caffemodel](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master) / [age_deploy.prototxt](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master)
-  - 物体識別モデル: [frozen_inference_graph.pb](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference) / [ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference) / [coco.names](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference)
+  - 物体識別モデル: [frozen_inference_graph.pb](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference) / [ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference) / [coco.names](https://gist.github.com/tersekmatija/9d00c4683d52d94cf348acae29e8db1a)
 - モーター制御・LED制御: [pantilt-hat](https://github.com/pimoroni/pantilt-hat)
 
 > **Note**
