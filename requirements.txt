@@ -1,0 +1,6 @@
+###### Requirements ######
+
+python-dotenv
+vosk
+pyaudio # portaudio19-dev が必要
+pantilthat

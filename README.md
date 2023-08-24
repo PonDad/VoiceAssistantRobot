@@ -9,15 +9,26 @@
 
 ## ソフトウェア
 - OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/)
+- Python3.9.2: [requirements]()
 - 音声認識: [Vosk](https://pypi.org/project/vosk/) / [vosk-model-small-ja-0.22](https://alphacephei.com/vosk/models)
-- 音声発話: [Aques Talk Pi](https://www.a-quest.com/products/aquestalkpi.html)
-- 画像処理: [OpenCV 64bit 4.5.4~](https://qengineering.eu/install-opencv-on-raspberry-64-os.html)
-  - 顔認識モデル: [yunet_n_320_320.onnx](https://github.com/ShiqiYu/libfacedetection.train/tree/master/onnx)
+- 音声発話: [Aques Talk Pi](https://www.a-quest.com/products/aquestalkpi.html) / [AquesTalk Installer](https://github.com/noraworld/aquestalk-installer)
+- 画像処理: [OpenCV 64bit 4.5.5](https://opencv.org/releases/) / [Install OpenCV on Raspberry 64 OS](https://qengineering.eu/install-opencv-on-raspberry-64-os.html)
+  - 顔認識モデル: [yunet.onnx](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet)
   - 顔識別モデル: [face_recognizer_fast.onnx](https://drive.google.com/file/d/1ClK9WiB492c5OZFKveF3XiHCejoOxINW/view)
-  - 性別識別モデル: [gender_net.caffemodel](https://github.com/eveningglow/age-and-gender-classification/blob/master/model/gender_net.caffemodel) / [gender_deploy.prototxt](https://github.com/eveningglow/age-and-gender-classification/blob/master/model/deploy_gender2.prototxt)
-  - 年令識別モデル: [age_net.caffemodel](https://github.com/eveningglow/age-and-gender-classification/blob/master/model/age_net.caffemodel) / [age_deploy.prototxt](https://github.com/eveningglow/age-and-gender-classification/blob/master/model/deploy_age2.prototxt)
-  - 物体識別モデル: [frozen_inference_graph.pb](https://www.dropbox.com/s/ardvflqmwwe8uzl/frozen_inference_graph.pb?dl=1) / [ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt](https://www.dropbox.com/s/dfn0sb43ovb8pr0/ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt?dl=1) / [coco.names](https://github.com/pjreddie/darknet/blob/master/data/coco.names)
-- モーター制御・LED制御: [pantilthat](https://pypi.org/project/pantilthat/)
+  - 性別識別モデル: [gender_net.caffemodel](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master) / [gender_deploy.prototxt](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master)
+  - 年令識別モデル: [age_net.caffemodel](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master) / [age_deploy.prototxt](https://github.com/smahesh29/Gender-and-Age-Detection/tree/master)
+  - 物体識別モデル: [frozen_inference_graph.pb](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference) / [ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference) / [coco.names](https://www.kaggle.com/code/chienhsianghung/object-detection-using-opencv-inference)
+- モーター制御・LED制御: [pantilt-hat](https://github.com/pimoroni/pantilt-hat)
+
+> **Note**
+> Voskモデルはリンク先よりダウンロードしてください。
+>
+> AquesTalkPiは利用許諾を確認の上ダウンロードしてください。
+>
+> OpenCVは`yunet.onnx`を使用する場合、バージョン4.5.4以上が必要です。また4.8以降は別のモデルが必要になります。
+>
+> Raspberry Pi OSにOpenCVを入れる際、ビルドしなければなりません。リンクからサイトに行き手順通りおこなえばエラーが出ません。インストール用のスクリプトも作成してくれています。
+
 
 ## 仕組み
 ![img2](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/chart_1.png)
