@@ -10,7 +10,7 @@
 
 ## ソフトウェア
 - OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/)
-- Python3.9.2: [requirements]()
+- Python3.9.2: [requirements](https://github.com/PonDad/VoiceAssistantBot/blob/main/requirements.txt)
 - 音声認識: [Vosk](https://pypi.org/project/vosk/) / [vosk-model-small-ja-0.22](https://alphacephei.com/vosk/models)
 - 音声発話: [Aques Talk Pi](https://www.a-quest.com/products/aquestalkpi.html) / [AquesTalk Installer](https://github.com/noraworld/aquestalk-installer)
 - 画像処理: [OpenCV 64bit 4.5.5](https://opencv.org/releases/) / [Install OpenCV on Raspberry 64 OS](https://qengineering.eu/install-opencv-on-raspberry-64-os.html)
