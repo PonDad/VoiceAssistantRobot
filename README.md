@@ -6,6 +6,7 @@
 - パンチルトハット: [Pimoroni Pan-Tilt HAT](https://shop.pimoroni.com/products/pan-tilt-hat?variant=22408353287)
 - カラーLEDスティック: [Adafruit NeoPixel Stick 8](https://shop.pimoroni.com/products/neopixel-stick-8-x-5050-rgbw-leds?variant=17436712071)
 - 熱対策(オプション) [GeeekPi Fan Hat for Raspberry Pi 4 Model B](https://wiki.52pi.com/index.php?title=EP-0152) 
+- 気温・湿度・照度・水分計測（オプション）: [WioNode](https://www.seeedstudio.com/Wio-Node.html)
 
 ## ソフトウェア
 - OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/)
@@ -30,6 +31,8 @@
 > Raspberry Pi OSにOpenCVを入れる際、ソースからビルドしなければなりません。リンクからサイトに行き手順通りおこなってください。サイトの運営の方がインストール用のスクリプトをつくってくれていますので活用してください。
 >
 > 画像認識用のDNNモデルは各リンク先よりダウンロードしたものです。
+>
+> リビングの気温・湿度・照度・鉢植えの水分は日本のサーバーをSeeed日本法人が用意してくれたので（[日本にWioサーバーを設置しました](https://lab.seeed.co.jp/entry/2022/01/25/120000)）そちらを利用しています。サーバーのアクセストークンは`.env`に記載しています。
 
 ## 仕組み
 ![img2](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/chart_1.png)
