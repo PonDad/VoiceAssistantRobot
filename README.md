@@ -1,8 +1,8 @@
 # VoiceAssistantRobot_RPi
-![img1](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/image_1.JPG)
+![header](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/image_1.JPG)
 
 ## 仕組み
-![img2](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/chart_1.png)
+![chart1](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/chart_1.png)
 
 音声発話（ユーザー） --> 音声認識（Vosk） --> テキスト化 --> コマンド実行（`analyze`関数） --> 音声合成（Aques Talk Pi）--> 合成音声発話（ロボット）
 
