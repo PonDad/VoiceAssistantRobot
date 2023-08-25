@@ -1,8 +1,8 @@
-# VoiceAssistantRobot_RPi
-![header](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/image_1.jpg)
+# VoiceAssistantRobot
+![header](https://github.com/PonDad/VoiceAssistantRobot/blob/main/image/image_1.jpg)
 
 ## 仕組み
-![chart1](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/chart_1.png)
+![chart1](https://github.com/PonDad/VoiceAssistantRobot/blob/main/image/chart_1.png)
 
 音声発話（ユーザー） --> 音声認識（Vosk） --> テキスト化 --> コマンド実行（`analyze`関数） --> 音声合成（Aques Talk Pi）--> 合成音声発話（ロボット）
 
@@ -18,7 +18,7 @@
 
 ## ソフトウェア
 - OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/)
-- Python3.9.2: [requirements](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/requirements.txt)
+- Python3.9.2: [requirements](https://github.com/PonDad/VoiceAssistantRobot/blob/main/requirements.txt)
 - 音声認識: [Vosk](https://pypi.org/project/vosk/) / [vosk-model-small-ja-0.22](https://alphacephei.com/vosk/models)
 - 音声発話: [Aques Talk Pi](https://www.a-quest.com/products/aquestalkpi.html) / [AquesTalk Installer](https://github.com/noraworld/aquestalk-installer)
 - 画像処理: [OpenCV 64bit 4.5.5](https://opencv.org/releases/) / [Install OpenCV on Raspberry 64 OS](https://qengineering.eu/install-opencv-on-raspberry-64-os.html)
