@@ -1,5 +1,5 @@
 # VoiceAssistantRobot_RPi
-![header](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/image_1.JPG)
+![header](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/image_1.jpg)
 
 ## 仕組み
 ![chart1](https://github.com/PonDad/VoiceAssistantRobot_RPi/blob/main/image/chart_1.png)
