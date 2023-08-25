@@ -1,4 +1,4 @@
-# VoiceAssistantBot
+# VoiceAssistantRobot_RPi
 ![img1](https://github.com/PonDad/VoiceAssistantBot/blob/main/image/vagpt1.JPG)
 
 ## 仕組み
