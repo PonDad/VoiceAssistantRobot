@@ -1,13 +1,6 @@
 # VoiceAssistantRobot
 ![header](https://github.com/PonDad/VoiceAssistantRobot/blob/main/image/image_1.jpg)
 
-## 仕組み
-![chart1](https://github.com/PonDad/VoiceAssistantRobot/blob/main/image/chart_1.png)
-
-音声発話（ユーザー） --> 音声認識（Vosk） --> テキスト化 --> コマンド実行（`analyze`関数） --> 音声合成（Aques Talk Pi）--> 合成音声発話（ロボット）
-
-の様に動作します。各コマンドは登録されたワードに一致すれば実行、という処理になります。
-
 ## ハードウェア
 - 本体: [RaspberryPi4 ModelB 4GB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 - パンチルトハット: [Pimoroni Pan-Tilt HAT](https://shop.pimoroni.com/products/pan-tilt-hat?variant=22408353287)
@@ -36,18 +29,45 @@
 >
 > OpenCVは`yunet.onnx`を使用する場合、バージョン4.5.4以上が必要です。また4.8以降は別のモデルが必要になります。
 >
-> Raspberry Pi OSにOpenCVを入れる際、ソースからビルドしなければなりません。リンクからサイトに行き手順通りおこなってください。サイトの運営の方がインストール用のスクリプトをつくってくれていますので活用してください。
+> Raspberry Pi OSにOpenCVを入れる際、ソースからビルドが必要です。リンク先のサイトに行き、指示に従って進めてください。サイトの運営者がインストール用のスクリプトを提供しているので、そちらを活用してください。
 >
 > 画像認識用のDNNモデルは各リンク先よりダウンロードしたものです。
 >
-> リビングの気温・湿度・照度・鉢植えの水分は日本のサーバーをSeeed日本法人が用意してくれたので（[日本にWioサーバーを設置しました](https://lab.seeed.co.jp/entry/2022/01/25/120000)）そちらを利用しています。サーバーのアクセストークンは`.env`に記載しています。
+> リビングの気温・湿度・照度・鉢植えの水分データの取得にはSeeed日本法人が用意した日本のサーバーを使用しています（[日本にWioサーバーを設置しました](https://lab.seeed.co.jp/entry/2022/01/25/120000)）。サーバーのアクセストークンは`.env`ファイルに記述しています。
+
+## 仕組み
+![chart1](https://github.com/PonDad/VoiceAssistantRobot/blob/main/image/chart_1.png)
+
+#### 音声発話（ユーザー）
+ユーザーの音声発話は、RaspberryPiに接続したUSBマイクから得た音声をPythonのオーディオライブラリPyAudioを使ってストリーミングします。
+
+#### 音声認識（Vosk）
+ストリーミングデータを音声認識エンジンVoskを使いテキストに変換します。
+ 
+#### コマンド実行（analyze関数）
+独自関数`analize()`により、入力されたテキストが事前に登録されたコマンドと一致するか、条件分岐により振り分けを行います。
+
+実験用に登録した実行コマンドは以下の通りです
+
+- 日時データ取得（`datetime`モジュール）
+- WioNodeからのデータ取得(`requests`モジュールを利用したGETメソッド)
+- 顔認証・物体認識（OpenCVとDNNモデルを使ったリアルタイム顔認識、物体認識）
+- サーボモーター・LEDライト制御（PanTiltHATライブラリを使用）
+
+コマンドの実行と合わせて、ロボットの回答は事前に記述しておきます。
+
+#### 音声合成（Aques Talk Pi）
+各コマンドの回答テキストはAques Talk Piを使って音声合成を行います。Pythonの`subprocess`を使い、合成音声されたwavファイルをパイプでつなぎ`aplay`で再生出来るようになっており、記述がシンプルに行えます。
+
+#### 合成音声発話（ロボット）
+`aplay`で再生されたwavファイルをスピーカーで再生します。
 
 ## 使い方
 各ライブラリをインポート後、必要なモデルをダウンロードしディレクトリに配置します。ユーザー情報の登録は
 ```bash
 python bot_face_data_creator.py
 ```
-を実行し、ユーザーID、ユーザー名、興味のあることを登録し、顔認証用の写真を撮影してください。年令・性別は自動で判別されますがかけ離れている場合は`data/user_data.json`を手動で修正することも可能です。
+を実行し、ユーザーID、ユーザー名、興味のあることを登録し、顔認証用の写真を撮影してください。年令・性別は自動で判別されますが、かけ離れている場合は`data/user_data.json`を手動で修正することも可能です。
 
 `data/command_data.json`でウェイクワードを設定できますので、好みのものに変更可能です。同様に終了ワードやコマンドワードも自由に変更できます。
 
