@@ -10,7 +10,7 @@
 - USBマイク・USBスピーカー: RaspberryPiで使用可能なものを適宜使用してください
 
 ## ソフトウェア
-- OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/)
+- OS: [Raspberry Pi OS (64-bit)](https://www.raspberrypi.com/software/operating-systems/) / [Raspberry Pi 設定チートシート](https://gist.github.com/PonDad/3415837db6db0ce22352eda8babb7622)
 - Python3.9.2: [requirements](https://github.com/PonDad/VoiceAssistantRobot/blob/main/requirements.txt)
 - 音声認識: [Vosk](https://pypi.org/project/vosk/) / [vosk-model-small-ja-0.22](https://alphacephei.com/vosk/models)
 - 音声発話: [Aques Talk Pi](https://www.a-quest.com/products/aquestalkpi.html) / [AquesTalk Installer](https://github.com/noraworld/aquestalk-installer)
